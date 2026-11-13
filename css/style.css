@@ -1,1193 +1,827 @@
 /* ==============================
-
-     CONFIGURAÇÕES GERAIS
-
+   CONFIGURAÇÕES GERAIS
 ============================== */
 
 :root {
 
-       --green: #234936;
+    --green: #234936;
+    --green-dark: #193729;
+    --green-light: #496b54;
 
-       --green-dark: #193729;
+    --cream: #f7f5ee;
+    --cream-dark: #eeece3;
 
-       --green-light: #496b54;
+    --sand: #bea77e;
 
-       --cream: #f7f5ee;
+    --text: #30352f;
+    --text-light: #70746c;
 
-       --cream-dark: #eeece3;
+    --white: #ffffff;
 
-       --sand: #bea77e;
-
-       --text: #30352f;
-
-       --text-light: #70746c;
-
-       --white: #ffffff;
-
-       --font-main: "DM Sans", sans-serif;
-
-       --font-title: "Playfair Display", serif;
+    --font-main: "DM Sans", sans-serif;
+    --font-title: "Playfair Display", serif;
 
 }
 
 * {
-
-       margin: 0;
-
-       padding: 0;
-
-       box-sizing: border-box;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-
-       scroll-behavior: smooth;
-
-       overflow-x: hidden;
-
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
+    overflow-x: hidden;
 }
 
 body {
-
-       font-family: var(--font-main);
-
-       background: var(--cream);
-
-       color: var(--text);
-
-       line-height: 1.6;
-
+    font-family: var(--font-main);
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
-
-       text-decoration: none;
-
-       color: inherit;
-
+    text-decoration: none;
+    color: inherit;
 }
 
 button {
-
-       font-family: inherit;
-
+    font-family: inherit;
 }
 
 .container {
-
-       width: 90%;
-
-       max-width: 1200px;
-
-       margin: 0 auto;
-
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .section {
-
-       padding: 110px 0;
-
+    padding: 110px 0;
 }
 
 .section-label {
-
-       display: inline-block;
-
-       color: var(--green-light);
-
-       font-size: 12px;
-
-       font-weight: 700;
-
-       letter-spacing: 3px;
-
-       margin-bottom: 20px;
-
+    display: inline-block;
+    color: var(--green-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
 }
 
+
 /* ==============================
-
-     CABEÇALHO
-
+   CABEÇALHO
 ============================== */
 
 .header {
+    width: 100%;
+    background: var(--cream);
+    border-bottom: 1px solid #e7e4da;
 
-       width: 100%;
-
-       background: var(--cream);
-
-       border-bottom: 1px solid #e7e4da;
-
-       position: sticky;
-
-       top: 0;
-
-       z-index: 1000;
-
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-content {
+    min-height: 95px;
 
-       min-height: 95px;
-
-       display: flex;
-
-       align-items: center;
-
-       justify-content: space-between;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
+    color: var(--green-dark);
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: -1px;
 
-       color: var(--green-dark);
+    display: flex;
+    flex-direction: column;
 
-       font-size: 27px;
-
-       font-weight: 700;
-
-       letter-spacing: -1px;
-
-       display: flex;
-
-       flex-direction: column;
-
-       line-height: 1.1;
-
+    line-height: 1.1;
 }
-
-/* NOVO: mantém o monograma ao lado do nome */
 
 .logo-main {
-
-       display: flex;
-
-       align-items: center;
-
-       gap: 10px;
-
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* NOVO: controla o tamanho do monograma */
-
 .logo-symbol {
-
-       width: 48px;
-
-       height: auto;
-
-       display: block;
-
-       flex-shrink: 0;
-
+    width: 48px;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
 }
 
 .logo span {
-
-       color: var(--green-light);
-
+    color: var(--green-light);
 }
 
-.logo > .logo-name {
-
-       color: var(--green-dark);
-
-       white-space: nowrap;
-
+.logo-name {
+    color: var(--green-dark);
+    white-space: nowrap;
 }
 
 .logo small {
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 600;
 
-       font-size: 9px;
+    margin-top: 7px;
 
-       letter-spacing: 2px;
-
-       font-weight: 600;
-
-       margin-top: 7px;
-
-       color: var(--text-light);
-
+    color: var(--text-light);
 }
 
+
+/* ==============================
+   NAVEGAÇÃO
+============================== */
+
 .navigation {
-
-       display: flex;
-
-       align-items: center;
-
-       gap: 35px;
-
+    display: flex;
+    align-items: center;
+    gap: 35px;
 }
 
 .navigation a {
-
-       font-size: 14px;
-
-       font-weight: 500;
-
-       color: var(--text);
-
-       transition: color 0.3s;
-
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    transition: color 0.3s;
 }
 
 .navigation a:hover {
-
-       color: var(--green-light);
-
+    color: var(--green-light);
 }
 
 .navigation .nav-contact {
+    background: var(--green);
+    color: var(--white);
 
-       background: var(--green);
-
-       color: var(--white);
-
-       padding: 12px 24px;
-
-       border-radius: 4px;
-
+    padding: 12px 24px;
+    border-radius: 4px;
 }
 
 .navigation .nav-contact:hover {
-
-       background: var(--green-dark);
-
-       color: var(--white);
-
+    background: var(--green-dark);
+    color: var(--white);
 }
 
 .menu-toggle {
-
-       display: none;
-
-       background: none;
-
-       border: none;
-
-       cursor: pointer;
-
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
+
 /* ==============================
-
-     APRESENTAÇÃO PRINCIPAL
-
+   APRESENTAÇÃO PRINCIPAL
 ============================== */
 
 .hero {
-
-       background: var(--cream-dark);
-
-       padding: 100px 0;
-
-       overflow: hidden;
-
+    background: var(--cream-dark);
+    padding: 100px 0;
+    overflow: hidden;
 }
 
 .hero-content {
+    display: grid;
 
-       display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
 
-       grid-template-columns: 1.1fr 0.9fr;
-
-       align-items: center;
-
-       gap: 70px;
-
+    align-items: center;
+    gap: 70px;
 }
 
 .hero-text h1 {
+    font-family: var(--font-title);
 
-       font-family: var(--font-title);
+    font-size: clamp(48px, 5vw, 68px);
+    line-height: 1.13;
 
-       font-size: clamp(48px, 5vw, 68px);
+    font-weight: 600;
+    color: var(--green-dark);
 
-       line-height: 1.13;
-
-       font-weight: 600;
-
-       color: var(--green-dark);
-
-       margin-bottom: 25px;
-
+    margin-bottom: 25px;
 }
 
 .hero-text h1 span {
-
-       color: var(--green-light);
-
+    color: var(--green-light);
 }
 
 .hero-text p {
-
-       max-width: 550px;
-
-       color: var(--text-light);
-
-       font-size: 16px;
-
-       margin-bottom: 35px;
-
+    max-width: 550px;
+    color: var(--text-light);
+    font-size: 16px;
+    margin-bottom: 35px;
 }
 
 .hero-buttons {
+    display: flex;
+    align-items: center;
 
-       display: flex;
-
-       align-items: center;
-
-       gap: 15px;
-
-       flex-wrap: wrap;
-
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
+
+/* ==============================
+   BOTÕES
+============================== */
+
 .button {
+    display: inline-block;
 
-       display: inline-block;
+    padding: 14px 25px;
 
-       padding: 14px 25px;
+    font-size: 13px;
+    font-weight: 600;
 
-       font-size: 13px;
-
-       font-weight: 600;
-
-       border-radius: 3px;
-
-       transition: 0.3s;
-
+    border-radius: 3px;
+    transition: 0.3s;
 }
 
 .button-primary {
-
-       background: var(--green);
-
-       color: var(--white);
-
+    background: var(--green);
+    color: var(--white);
 }
 
 .button-primary:hover {
-
-       background: var(--green-dark);
-
-       transform: translateY(-2px);
-
+    background: var(--green-dark);
+    transform: translateY(-2px);
 }
 
 .button-secondary {
-
-       border: 1px solid var(--green);
-
-       color: var(--green);
-
+    border: 1px solid var(--green);
+    color: var(--green);
 }
 
 .button-secondary:hover {
-
-       background: var(--green);
-
-       color: var(--white);
-
+    background: var(--green);
+    color: var(--white);
 }
 
+
+/* ==============================
+   CARTÃO PRINCIPAL
+============================== */
+
 .hero-visual {
+    min-height: 430px;
 
-       min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-       display: flex;
-
-       align-items: center;
-
-       justify-content: center;
-
-       background: var(--green);
-
-       padding: 35px;
-
+    background: var(--green);
+    padding: 35px;
 }
 
 .visual-card {
+    width: 100%;
+    min-height: 340px;
 
-       width: 100%;
+    padding: 45px;
 
-       min-height: 340px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
 
-       padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-       border: 1px solid rgba(255, 255, 255, 0.25);
-
-       display: flex;
-
-       flex-direction: column;
-
-       justify-content: center;
-
-       color: var(--white);
-
+    color: var(--white);
 }
 
 .visual-small {
+    font-size: 11px;
+    letter-spacing: 3px;
 
-       font-size: 11px;
-
-       letter-spacing: 3px;
-
-       color: #e5dfce;
-
-       font-weight: 600;
-
+    color: #e5dfce;
+    font-weight: 600;
 }
 
 .visual-line {
+    width: 45px;
+    height: 2px;
 
-       width: 45px;
+    background: var(--sand);
 
-       height: 2px;
-
-       background: var(--sand);
-
-       margin: 30px 0;
-
+    margin: 30px 0;
 }
 
 .visual-card h2 {
+    font-family: var(--font-title);
 
-       font-family: var(--font-title);
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 500;
 
-       font-size: 38px;
-
-       line-height: 1.2;
-
-       font-weight: 500;
-
-       margin-bottom: 20px;
-
+    margin-bottom: 20px;
 }
 
 .visual-card p {
-
-       color: #e5dfce;
-
-       font-size: 14px;
-
+    color: #e5dfce;
+    font-size: 14px;
 }
 
+
 /* ==============================
-
-     SOBRE
-
+   SOBRE
 ============================== */
 
 .about {
-
-       background: var(--cream);
-
+    background: var(--cream);
 }
 
 .about-content {
+    display: grid;
 
-       display: grid;
+    grid-template-columns: 1fr 1fr;
 
-       grid-template-columns: 1fr 1fr;
-
-       gap: 90px;
-
-       align-items: start;
-
+    gap: 90px;
+    align-items: start;
 }
 
 .about-heading h2 {
+    font-family: var(--font-title);
 
-       font-family: var(--font-title);
+    font-size: 43px;
+    line-height: 1.2;
+    font-weight: 500;
 
-       font-size: 43px;
-
-       line-height: 1.2;
-
-       font-weight: 500;
-
-       color: var(--green-dark);
-
+    color: var(--green-dark);
 }
 
 .about-heading h2 span {
-
-       display: block;
-
-       color: var(--green-light);
-
+    display: block;
+    color: var(--green-light);
 }
 
 .about-text p {
-
-       color: var(--text-light);
-
-       font-size: 15px;
-
-       margin-bottom: 20px;
-
+    color: var(--text-light);
+    font-size: 15px;
+    margin-bottom: 20px;
 }
 
+
 /* ==============================
-
-     SERVIÇOS
-
+   SERVIÇOS
 ============================== */
 
 .services {
-
-       background: var(--cream-dark);
-
+    background: var(--cream-dark);
 }
 
 .section-heading {
-
-       max-width: 650px;
-
-       margin-bottom: 55px;
-
+    max-width: 650px;
+    margin-bottom: 55px;
 }
 
 .section-heading h2 {
+    font-family: var(--font-title);
 
-       font-family: var(--font-title);
+    font-size: 43px;
+    line-height: 1.2;
+    font-weight: 500;
 
-       font-size: 43px;
-
-       line-height: 1.2;
-
-       font-weight: 500;
-
-       color: var(--green-dark);
-
-       margin-bottom: 18px;
-
+    color: var(--green-dark);
+    margin-bottom: 18px;
 }
 
 .section-heading h2 span {
-
-       color: var(--green-light);
-
+    color: var(--green-light);
 }
 
 .section-heading p {
-
-       color: var(--text-light);
-
-       font-size: 15px;
-
+    color: var(--text-light);
+    font-size: 15px;
 }
 
 .services-grid {
+    display: grid;
 
-       display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
-       grid-template-columns: repeat(4, 1fr);
-
-       gap: 20px;
-
+    gap: 20px;
 }
 
 .service-card {
+    background: var(--cream);
 
-       background: var(--cream);
+    padding: 35px 25px;
 
-       padding: 35px 25px;
+    border: 1px solid #e7e4da;
 
-       border: 1px solid #e7e4da;
-
-       transition: 0.3s;
-
+    transition: 0.3s;
 }
 
 .service-card:hover {
-
-       transform: translateY(-5px);
-
-       border-color: var(--sand);
-
+    transform: translateY(-5px);
+    border-color: var(--sand);
 }
 
 .service-number {
+    display: block;
 
-       display: block;
+    color: var(--sand);
 
-       color: var(--sand);
+    font-size: 13px;
+    font-weight: 700;
 
-       font-size: 13px;
-
-       font-weight: 700;
-
-       margin-bottom: 30px;
-
+    margin-bottom: 30px;
 }
 
 .service-card h3 {
-
-       color: var(--green-dark);
-
-       font-size: 17px;
-
-       margin-bottom: 15px;
-
+    color: var(--green-dark);
+    font-size: 17px;
+    margin-bottom: 15px;
 }
 
 .service-card p {
+    color: var(--text-light);
 
-       color: var(--text-light);
-
-       font-size: 13px;
-
-       line-height: 1.7;
-
+    font-size: 13px;
+    line-height: 1.7;
 }
 
+
 /* ==============================
-
-     DIFERENCIAIS
-
+   DIFERENCIAIS
 ============================== */
 
 .differentials {
-
-       background: var(--green-dark);
-
-       color: var(--white);
-
+    background: var(--green-dark);
+    color: var(--white);
 }
 
 .differentials-content {
+    display: grid;
 
-       display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
 
-       grid-template-columns: 0.9fr 1.1fr;
-
-       gap: 90px;
-
+    gap: 90px;
 }
 
 .differentials-heading .section-label {
-
-       color: var(--sand);
-
+    color: var(--sand);
 }
 
 .differentials-heading h2 {
+    font-family: var(--font-title);
 
-       font-family: var(--font-title);
-
-       font-size: 43px;
-
-       line-height: 1.2;
-
-       font-weight: 500;
-
+    font-size: 43px;
+    line-height: 1.2;
+    font-weight: 500;
 }
 
 .differentials-heading h2 span {
-
-       display: block;
-
-       color: #c8b795;
-
+    display: block;
+    color: #c8b795;
 }
 
 .differentials-list {
-
-       display: flex;
-
-       flex-direction: column;
-
-       gap: 30px;
-
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .differential-item {
+    padding-bottom: 25px;
 
-       padding-bottom: 25px;
-
-       border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .differential-item h3 {
-
-       font-size: 17px;
-
-       margin-bottom: 8px;
-
-       color: #e2d7c0;
-
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: #e2d7c0;
 }
 
 .differential-item p {
-
-       font-size: 14px;
-
-       color: #c4c9c1;
-
+    font-size: 14px;
+    color: #c4c9c1;
 }
 
+
 /* ==============================
-
-     PROJETOS
-
+   PROJETOS
 ============================== */
 
 .projects {
-
-       background: var(--cream);
-
+    background: var(--cream);
 }
 
 .projects-grid {
+    display: grid;
 
-       display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
-       grid-template-columns: repeat(2, 1fr);
-
-       gap: 30px;
-
+    gap: 30px;
 }
 
 .project-card {
-
-       background: var(--cream-dark);
-
-       overflow: hidden;
-
+    background: var(--cream-dark);
+    overflow: hidden;
 }
 
 .project-image {
+    height: 260px;
 
-       height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-       display: flex;
+    font-family: var(--font-title);
+    font-size: 55px;
 
-       align-items: center;
-
-       justify-content: center;
-
-       font-family: var(--font-title);
-
-       font-size: 55px;
-
-       color: rgba(255, 255, 255, 0.7);
-
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .project-image-one {
-
-       background: #526b4e;
-
+    background: #526b4e;
 }
 
 .project-image-two {
-
-       background: #b8a98a;
-
+    background: #b8a98a;
 }
 
 .project-info {
-
-       padding: 30px;
-
+    padding: 30px;
 }
 
 .project-category {
+    color: var(--green-light);
 
-       color: var(--green-light);
+    font-size: 10px;
+    font-weight: 700;
 
-       font-size: 10px;
-
-       font-weight: 700;
-
-       letter-spacing: 2px;
-
+    letter-spacing: 2px;
 }
 
 .project-info h3 {
+    color: var(--green-dark);
 
-       color: var(--green-dark);
+    font-family: var(--font-title);
+    font-size: 27px;
+    font-weight: 500;
 
-       font-family: var(--font-title);
-
-       font-size: 27px;
-
-       font-weight: 500;
-
-       margin: 12px 0;
-
+    margin: 12px 0;
 }
 
 .project-info p {
-
-       color: var(--text-light);
-
-       font-size: 14px;
-
+    color: var(--text-light);
+    font-size: 14px;
 }
 
+
 /* ==============================
-
-     CONTATO
-
+   CONTATO
 ============================== */
 
 .contact {
-
-       background: var(--green);
-
-       text-align: center;
-
-       color: var(--white);
-
+    background: var(--green);
+    text-align: center;
+    color: var(--white);
 }
 
 .contact-content {
-
-       max-width: 700px;
-
+    max-width: 700px;
 }
 
 .contact .section-label {
-
-       color: var(--sand);
-
+    color: var(--sand);
 }
 
 .contact-content h2 {
+    font-family: var(--font-title);
 
-       font-family: var(--font-title);
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 500;
 
-       font-size: 48px;
-
-       line-height: 1.2;
-
-       font-weight: 500;
-
-       margin-bottom: 20px;
-
+    margin-bottom: 20px;
 }
 
 .contact-content p {
-
-       color: #e0e6df;
-
-       font-size: 15px;
-
-       margin-bottom: 30px;
-
+    color: #e0e6df;
+    font-size: 15px;
+    margin-bottom: 30px;
 }
 
 .button-light {
-
-       background: var(--cream);
-
-       color: var(--green-dark);
-
+    background: var(--cream);
+    color: var(--green-dark);
 }
 
 .button-light:hover {
-
-       background: var(--sand);
-
+    background: var(--sand);
 }
 
+
 /* ==============================
-
-     RODAPÉ
-
+   RODAPÉ
 ============================== */
 
 .footer {
-
-       background: var(--green-dark);
-
-       color: var(--white);
-
-       padding: 35px 0;
-
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 35px 0;
 }
 
 .footer-content {
-
-       display: flex;
-
-       align-items: center;
-
-       justify-content: space-between;
-
-       gap: 25px;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
 }
 
 .footer-logo {
-
-       font-size: 21px;
-
-       font-weight: 700;
-
+    font-size: 21px;
+    font-weight: 700;
 }
 
 .footer-logo span {
-
-       color: var(--sand);
-
+    color: var(--sand);
 }
 
 .footer-content p {
-
-       font-size: 13px;
-
-       color: #c4c9c1;
-
+    font-size: 13px;
+    color: #c4c9c1;
 }
 
 .copyright {
-
-       font-size: 11px;
-
-       color: #c4c9c1;
-
+    font-size: 11px;
+    color: #c4c9c1;
 }
 
+
 /* ==============================
-
-     RESPONSIVIDADE
-
+   RESPONSIVIDADE ORIGINAL
 ============================== */
 
 @media (max-width: 900px) {
 
-.services-grid {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-              grid-template-columns: repeat(2, 1fr);
+    .hero-content {
+        gap: 35px;
+    }
 
-       }
-
-.hero-content {
-
-              gap: 35px;
-
-       }
-
-.about-content,
-
-.differentials-content {
-
-              gap: 45px;
-
-       }
+    .about-content,
+    .differentials-content {
+        gap: 45px;
+    }
 
 }
 
 @media (max-width: 700px) {
 
-.header-content {
-
-              min-height: 80px;
-
-       }
-
-.menu-toggle {
-
-              display: flex;
-
-              flex-direction: column;
-
-              gap: 5px;
-
-       }
-
-.menu-toggle span {
-
-              width: 25px;
-
-              height: 2px;
-
-              background: var(--green-dark);
-
-       }
-
-.navigation {
-
-              position: absolute;
-
-              top: 80px;
-
-              left: 0;
-
-              width: 100%;
-
-              background: var(--cream);
-
-              display: none;
-
-              flex-direction: column;
-
-              align-items: stretch;
-
-              gap: 0;
-
-              padding: 15px 5% 25px;
-
-              border-bottom: 1px solid #e7e4da;
-
-       }
-
-.navigation.active {
-
-              display: flex;
-
-       }
-
-.navigation a {
-
-              padding: 12px 0;
-
-       }
-
-.navigation .nav-contact {
-
-              text-align: center;
-
-              margin-top: 10px;
-
-       }
-
-.section {
-
-              padding: 75px 0;
-
-       }
-
-.hero-content {
-
-              grid-template-columns: 1fr;
-
-              gap: 45px;
-
-       }
-
-.hero-text h1 {
-
-              font-size: 46px;
-
-       }
-
-.hero-visual {
-
-              min-height: 320px;
-
-              padding: 20px;
-
-       }
-
-.visual-card {
-
-              min-height: 270px;
-
-              padding: 30px;
-
-       }
-
-.visual-card h2 {
-
-              font-size: 32px;
-
-       }
-
-.about-content,
-
-.differentials-content {
-
-              grid-template-columns: 1fr;
-
-              gap: 35px;
-
-       }
-
-.about-heading h2,
-
-.section-heading h2,
-
-.differentials-heading h2 {
-
-              font-size: 34px;
-
-       }
-
-.services-grid,
-
-.projects-grid {
-
-              grid-template-columns: 1fr;
-
-       }
-
-.service-card {
-
-              padding: 30px;
-
-       }
-
-.contact-content h2 {
-
-              font-size: 36px;
-
-       }
-
-.footer-content {
-
-              flex-direction: column;
-
-              text-align: center;
-
-       }
+    .header-content {
+        min-height: 80px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 2px;
+        background: var(--green-dark);
+    }
+
+    .navigation {
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        background: var(--cream);
+
+        display: none;
+        flex-direction: column;
+
+        align-items: stretch;
+        gap: 0;
+
+        padding: 15px 5% 25px;
+
+        border-bottom: 1px solid #e7e4da;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .navigation a {
+        padding: 12px 0;
+    }
+
+    .navigation .nav-contact {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .hero-text h1 {
+        font-size: 46px;
+    }
+
+    .hero-visual {
+        min-height: 320px;
+        padding: 20px;
+    }
+
+    .visual-card {
+        min-height: 270px;
+        padding: 30px;
+    }
+
+    .visual-card h2 {
+        font-size: 32px;
+    }
+
+    .about-content,
+    .differentials-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-heading h2,
+    .section-heading h2,
+    .differentials-heading h2 {
+        font-size: 34px;
+    }
+
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 30px;
+    }
+
+    .contact-content h2 {
+        font-size: 36px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
 
 }
 
 @media (max-width: 400px) {
 
-.hero-text h1 {
+    .hero-text h1 {
+        font-size: 39px;
+    }
 
-              font-size: 39px;
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
 
-       }
+    .button {
+        width: 100%;
+    }
 
-.hero-buttons {
-
-              align-items: stretch;
-
-              flex-direction: column;
-
-       }
-
-.button {
-
-              width: 100%;
-
-       }
-
-.contact-content h2 {
-
-              font-size: 31px;
-
-       }
+    .contact-content h2 {
+        font-size: 31px;
+    }
 
 }
 
+
 /* =========================================
    NOVO LAYOUT DA APRESENTAÇÃO — LEVI A.V.
-   Preserva estilos e seções originais
 ========================================= */
 
 @media (min-width: 701px) {
+
     .header-content {
         flex-direction: row-reverse;
     }
@@ -1201,6 +835,7 @@ button {
         margin-left: 24px;
         align-items: flex-end;
     }
+
 }
 
 .hero {
@@ -1216,6 +851,7 @@ button {
 .hero-visual {
     position: relative;
     isolation: isolate;
+
     background: transparent;
     padding: 20px 0;
 }
@@ -1223,22 +859,34 @@ button {
 .hero-visual-accent {
     position: absolute;
     z-index: -1;
+
     inset: -75px -12vw -75px 30%;
+
     background: var(--green-dark);
     transform: skewX(-24deg);
 }
 
 .visual-card {
     background: linear-gradient(135deg, #244f3b, #193729 80%);
+
     border: 1px solid rgba(255, 255, 255, 0.28);
     border-radius: 14px;
+
     box-shadow: 0 18px 38px rgba(17, 48, 33, 0.20);
 }
 
+
+/* =========================================
+   DESTAQUES DA APRESENTAÇÃO
+========================================= */
+
 .hero-highlights {
     display: flex;
+
     gap: 45px;
+
     margin-top: 45px;
+
     position: relative;
     z-index: 1;
 }
@@ -1247,14 +895,10 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
-    color: var(--green-dark);
-}
 
-.hero-highlight > span {
-    font-size: 21px;
-    line-height: 1;
-    color: var(--green-light);
+    gap: 8px;
+
+    color: var(--green-dark);
 }
 
 .hero-highlight small {
@@ -1262,49 +906,45 @@ button {
     line-height: 1.5;
 }
 
-@media (max-width: 900px) {
-    .navigation { gap: 15px; }
-    .navigation a { font-size: 12px; }
-    .logo { font-size: 23px; }
-}
-
-@media (max-width: 700px) {
-    .header-content { flex-direction: row; }
-    .hero { padding: 75px 0; }
-    .hero-visual-accent { inset: -18px -5vw -18px 40%; }
-    .hero-highlights {
-        flex-wrap: wrap;
-        gap: 25px;
-        margin-top: 35px;
-    }
-    .hero-highlight { min-width: 90px; }
-}
 
 /* =========================================
    REFINAMENTO VISUAL — SEÇÃO SOBRE NÓS
-   Preserva o conteúdo e as demais seções.
 ========================================= */
 
 .about {
     position: relative;
-    background: linear-gradient(115deg, #f7f5ee 0%, #f7f5ee 52%, #eeece3 100%);
+
+    background: linear-gradient(
+        115deg,
+        #f7f5ee 0%,
+        #f7f5ee 52%,
+        #eeece3 100%
+    );
+
     overflow: hidden;
 }
 
 .about::before {
     content: "";
+
     position: absolute;
+
     top: 0;
     left: max(5%, calc((100% - 1200px) / 2));
+
     width: 68px;
     height: 3px;
+
     background: var(--sand);
 }
 
 .about-content {
     position: relative;
+
     grid-template-columns: 0.95fr 1.05fr;
+
     gap: clamp(35px, 6vw, 90px);
+
     align-items: center;
 }
 
@@ -1318,10 +958,13 @@ button {
 }
 
 .about-text {
-    background: #ffffff;
+    background: var(--white);
+
     padding: clamp(28px, 3.5vw, 48px);
+
     border: 1px solid #e7e4da;
     border-radius: 10px;
+
     box-shadow: 0 16px 38px rgba(25, 55, 41, 0.06);
 }
 
@@ -1333,7 +976,265 @@ button {
     margin-bottom: 0;
 }
 
+
+/* =========================================
+   CORREÇÃO 1 — ÍCONES PROFISSIONAIS
+========================================= */
+
+.hero-highlight svg {
+    width: 25px;
+    height: 25px;
+
+    fill: none;
+
+    stroke: var(--green-light);
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    flex-shrink: 0;
+}
+
+.hero-highlight {
+    min-width: 115px;
+}
+
+.hero-highlight small {
+    color: var(--green-dark);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   CORREÇÃO 2 — ESPAÇAMENTO DOS DESTAQUES
+========================================= */
+
+.hero {
+    padding-top: 85px;
+    padding-bottom: 65px;
+}
+
+.hero-highlights {
+    margin-top: 20px;
+    gap: 35px;
+}
+
+.hero-highlight {
+    gap: 10px;
+}
+
+
+/* =========================================
+   CORREÇÃO 3 — LINHA DOURADA SOBRE NÓS
+========================================= */
+
+.about::before {
+    display: none;
+}
+
+.about-heading {
+    position: relative;
+
+    padding: 26px 0 26px 28px;
+
+    border-left: 3px solid var(--sand);
+}
+
+.about-heading .section-label {
+    position: relative;
+}
+
+
+/* =========================================
+   CORREÇÃO 4 — CABEÇALHO DO CELULAR
+   MENU À ESQUERDA E LOGOTIPO À DIREITA
+========================================= */
+
 @media (max-width: 700px) {
+
+    html {
+        scroll-padding-top: 80px;
+    }
+
+    .header-content {
+        flex-direction: row-reverse;
+
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 15px;
+
+        min-height: 80px;
+    }
+
+    .logo {
+        margin-left: auto;
+        align-items: flex-end;
+
+        font-size: 21px;
+    }
+
+    .logo-main {
+        gap: 7px;
+    }
+
+    .logo-symbol {
+        width: 35px;
+        height: auto;
+    }
+
+    .logo-name {
+        white-space: nowrap;
+    }
+
+    .logo small {
+        font-size: 7px;
+        letter-spacing: 1.2px;
+
+        text-align: right;
+    }
+
+    .menu-toggle {
+        display: flex;
+
+        order: 0;
+
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 5px;
+
+        padding: 10px;
+
+        flex-shrink: 0;
+    }
+
+    .menu-toggle span {
+        display: block;
+
+        width: 25px;
+        height: 2px;
+
+        background: var(--green-dark);
+    }
+
+    .navigation {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background: var(--cream);
+
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 15px 5% 25px;
+
+        border-bottom: 1px solid #e7e4da;
+
+        box-shadow: 0 12px 24px rgba(25, 55, 41, 0.08);
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .navigation a {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+
+    .navigation .nav-contact {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+}
+
+
+/* =========================================
+   CORREÇÃO 5 — APRESENTAÇÃO NO CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        padding-top: 60px;
+        padding-bottom: 55px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(38px, 8vw, 46px);
+    }
+
+    .hero-text p {
+        margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .hero-visual {
+        min-height: 300px;
+
+        padding: 15px 0;
+    }
+
+    .hero-visual-accent {
+        inset: -15px -5vw -15px 40%;
+    }
+
+    .visual-card {
+        min-height: 270px;
+        padding: 30px;
+    }
+
+    .visual-card h2 {
+        font-size: 32px;
+    }
+
+    .hero-highlights {
+        margin-top: 25px;
+
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 15px;
+
+        align-items: start;
+    }
+
+    .hero-highlight {
+        min-width: 0;
+        gap: 9px;
+    }
+
+    .hero-highlight svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    .hero-highlight small {
+        font-size: 11px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -1346,4 +1247,75 @@ button {
     .about-text {
         padding: 28px 24px;
     }
+
+}
+
+
+/* =========================================
+   AJUSTES PARA CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .logo-symbol {
+        width: 31px;
+    }
+
+    .logo small {
+        font-size: 6px;
+        letter-spacing: 1px;
+    }
+
+    .hero-text h1 {
+        font-size: 37px;
+    }
+
+    .hero-highlights {
+        gap: 10px;
+    }
+
+    .hero-highlight small {
+        font-size: 10px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .button {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================
+   ACESSIBILIDADE
+========================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--sand);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
 }
